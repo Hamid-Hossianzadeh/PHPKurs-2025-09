@@ -10,3 +10,16 @@
 *
 * Hilfsmittel: rand(), Verzweigung
 */
+
+
+// Würfeln einer Zahl zwischen 1 und 6
+$zahl = rand(1, 6);
+
+// Ausgabe abhängig vom Ergebnis
+if ($zahl == 6) {
+    echo "Super, eine 6!";
+} elseif ($zahl == 5) {
+    echo "Immerhin noch eine 5!";
+} else {
+    echo "Das reicht nicht! (bei $zahl)";
+}

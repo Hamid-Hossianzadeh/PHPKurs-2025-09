@@ -8,8 +8,8 @@
 */
 
 // Variablen erstellen
-$vorname = "Peter";
-$nachname = "Müller";
+$vorname = "Hamid";
+$nachname = "Hossianzadeh";
 $wohnort = "Heilbronn";
 
 // Ausgabe
