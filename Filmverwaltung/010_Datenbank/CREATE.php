@@ -16,11 +16,11 @@ $db->query('CREATE TABLE filme ('
     . 'genre VARCHAR(255),'
     . 'vertrieb VARCHAR(255),'
     . 'fsk INT,'
-    . 'einspielergebnis BIGINT,'
+    . 'einspielergebnis FLOAT,'
     . 'laenge INT,'
     . 'cover VARCHAR(255));');
 
-$statement = $db->query('SHOW COLUMNS FROM film;');
+$statement = $db->query('SHOW COLUMNS FROM filme;');
 var_dump($statement);
 
 $spalten = $statement->fetchAll();

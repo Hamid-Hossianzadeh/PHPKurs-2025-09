@@ -11,7 +11,7 @@ CREATE TABLE filme (
 	genre VARCHAR(255),
 	vertrieb VARCHAR(255),
 	fsk INT,
-	einspielergebnis BIGINT,
+	einspielergebnis FLOAT,
 	laenge INT,
 	cover VARCHAR(255)
 );
@@ -19,3 +19,8 @@ CREATE TABLE filme (
 -- TODO: Regisseure, mehrere Genres, Autoren
 
 SHOW COLUMNS FROM filme;
+
+INSERT INTO filme VALUES
+(1, 'Equalizer', 2014, 'Action', 'Sony Pictures', 16, 192.3, 132, NULL);
+
+SELECT * FROM filme;
