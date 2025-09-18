@@ -17,7 +17,16 @@ $options = [
 $headings = array_keys($filme[0]);
 // var_dump($headings);
 
+$headings = array_map('ucfirst', $headings);
+
+foreach ($filme as $key => $film) {
+    unset($film['id']);
+    $filme[$key] = $film;
+}
+
 ?>
+
+<!-- TODO: ID-Heading raus, Fsk -> FSK -->
 
 <!DOCTYPE html>
 <html lang="de">
@@ -51,7 +60,10 @@ $headings = array_keys($filme[0]);
     </tr>
     <?php } ?>
 
+
+
 </table>
+
 
 
 </body>
