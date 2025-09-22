@@ -24,3 +24,4 @@ INSERT INTO filme VALUES
 (1, 'Equalizer', 2014, 'Action', 'Sony Pictures', 16, 192.3, 132, NULL);
 
 SELECT * FROM filme;
+

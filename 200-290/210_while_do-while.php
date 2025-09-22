@@ -9,7 +9,7 @@ while ($i <= 10) {
     echo $i . ' ';
     $i++;
 }
-echo "<br>";
+echo '<br>';
 
 // Die Stärke von while:
 // Die Anzahl der Durchläufe ist nicht bekannt.
@@ -17,16 +17,17 @@ echo "<br>";
 while (rand(1, 6) != 6) {
     echo 'Bäh! ';
 }
-echo "<br>";
+echo '<br>';
 
 // do while
-// Fußgesteuerte Schleife
+// Fußgesteuerte Schleife.
 // Läuft mindestens einmal durch.
 
 do {
     $wurf = rand(1, 6);
     echo $wurf . ' ';
 } while ($wurf != 6);
+echo '<br>';
 
 
 // Python
@@ -36,3 +37,23 @@ while ($wurf != 6) {
     $wurf = rand(1, 6);
     echo $wurf . ' ';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

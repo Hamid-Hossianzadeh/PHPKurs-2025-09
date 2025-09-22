@@ -1,9 +1,9 @@
 <?php
 
-// Bei GET werden die Inhalte sichtbar der URL übergeben.
+// Bei GET werden die Inhalte sichtbar in der URL übergeben.
 var_dump($_GET);
 
-// Bei der Methode POST werden die Inhalte in Hintergrund überliefert.
+// Bei der Methode POST werden die Inhalte im Hintergrund überliefert.
 var_dump($_POST);
 
 
@@ -17,9 +17,9 @@ var_dump($_POST);
 <body>
 <h1>HTML-Formular</h1>
 
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
-    vorname: <input type="text" name="vorname">
+    Vorname:<input type="text" name="vorname">
     <input type="submit" value="Abschicken">
 
 </form>

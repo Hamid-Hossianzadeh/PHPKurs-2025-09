@@ -7,7 +7,7 @@
 print 'Hello';
 echo 'Hello';
 
-$var = 'Hamid';
+$var = 'Cord';
 print $var;
 
 // Bei einfachen Anführungszeichen wird der Inhalt einfach ausgegeben.
@@ -17,6 +17,10 @@ print "\n<br>";
 print 'Hallo $var';
 print "\n<br>";
 print "Hallo $var";
+
+
+
+
 
 
 

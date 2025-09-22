@@ -1,11 +1,6 @@
 <?php
 
-// Datenbankverbindung herstellen (wie in "Test-Datensätze.php")
-$options = [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-];
-$db = new PDO('mysql:host=localhost;dbname=filmverwaltung', 'root', "", $options);
+require_once 'lib/db_verbindung.php';
 
 // var_dump($_GET);
 // echo $_GET['id'];
@@ -33,17 +28,18 @@ var_dump($film);
 </head>
 <body>
 <h1>Film anzeigen</h1>
+
 <table>
-    <?php foreach ($film as $k => $v) { ?>
-    <tr>
-        <th>
-            <?php echo $k; ?>
-        </th>
-        <td>
-            <?php echo $v; ?>
-        </td>
-    </tr>
-    <?php } ?>
+        <?php foreach ($film as $k => $v) { ?>
+        <tr>
+            <th>
+                <?php echo $k; ?>
+            </th>
+            <td>
+                <?php echo $v; ?>
+            </td>
+        </tr>
+        <?php } ?>
 </table>
 
 </body>

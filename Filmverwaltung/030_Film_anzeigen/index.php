@@ -1,43 +1,37 @@
 <?php
 
-$options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
- ];
- $db = new PDO('mysql:host=localhost;dbname=filmverwaltung', 'root', "", $options);
+// reguire_once bindet die angegebene Datei an genau der Stelle im Quellcode ein.
+require_once 'lib/db_verbindung.php';
 
- $stmt = $db->query('SELECT * FROM filme;');
- $filme = $stmt->fetchAll();
+$stmt = $db->query('SELECT * FROM filme;');
+$filme = $stmt->fetchAll();
 // var_dump($filme);
 
-// var_dump($filme[0]);  // array(9)
+var_dump($filme[0]);  // array(9)
 
 // echo $filme[0]['titel'];  // Equalizer
 
 $headings = array_keys($filme[0]);
 // Spaltenüberschriften entfernen:
-unset($headings[0]);    // In PHP werden Arrays nicht neu indiziert
+//unset($headings[0]);  // In PHP werden Arrays nicht neu indiziert
 unset($headings[8]);
-var_dump($headings);
-
+// var_dump($headings);
 
 foreach ($headings as $k => $v) {
-    if($v == 'fsk') $v = strtoupper($v);
+    if ($v == 'fsk') $v = strtoupper($v);
     $headings[$k] = $v;
 }
-
-
 $headings = array_map('ucfirst', $headings);
 
 foreach ($filme as $key => $film) {
-//    unset($film['id']);     // Inhalte entfernen
+    // unset($film['id']);     // Inhalte entfernen
     unset($film['cover']);  // Inhalte entfernen
     $filme[$key] = $film;
 }
 
 ?>
 
-<!-- TODO: ID-Heading raus, Fsk -> FSK -->
+<!-- TODO: Fsk -> FSK -->
 
 <!DOCTYPE html>
 <html lang="de">
@@ -70,6 +64,7 @@ foreach ($filme as $key => $film) {
 
         <?php } ?>
     </tr>
+
     <?php } ?>
 
 

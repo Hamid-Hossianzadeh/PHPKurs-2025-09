@@ -3,15 +3,15 @@
 # Datentypen
 
 // Zeichenkette
-print gettype(value: 'Hello');  // string
+print gettype('Hello');  // string
 print '<br>';
 
 // Ganzzahl
-print gettype(value: 123456);  // integer
+print gettype(123456);  // integer
 print '<br>';
 
 // Fließkommazahl
-print gettype(value: 123.789);  // double
+print gettype(123.789);  // double
 print '<br>';
 
 // Unterstrich als Tausendertrenner
@@ -21,7 +21,7 @@ print 1_000_000_000;  // 1000000000
 print '<br>';
 
 // Wahrheitswert
-print gettype(value: true);  // boolean
+print gettype(true);  // boolean
 print '<br>';
 
 // Identisch-Operator ===
@@ -31,3 +31,23 @@ print '<br>';
 var_dump(123 == '123');  // bool(true)
 print '<br>';
 var_dump(123 === '123');  // bool(false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

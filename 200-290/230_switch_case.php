@@ -5,7 +5,7 @@
 // In Python erst seit 3.10 als match case
 
 $tag = rand(1, 7);
-
+echo $tag . ': ';
 // Variablenbezeichner: lowerCamelCase
 
 switch ($tag) {
@@ -33,3 +33,8 @@ switch ($tag) {
     default:
         echo 'FEHLER';
 }
+
+
+
+
+

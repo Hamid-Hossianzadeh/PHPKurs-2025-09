@@ -1,11 +1,13 @@
 <?php
 
+// https://www.php.net/manual/en/pdo.setattribute.php
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 ];
 
 $db = new PDO('mysql:host=localhost;dbname=filmverwaltung', 'root', "", $options);
+// $db = new PDO('mysql:host=localhost;dbname=filmverwaltung', 'root', "");
 
 $db->query('TRUNCATE TABLE filme;');
 
@@ -22,12 +24,12 @@ $db->query("INSERT INTO filme VALUES
 (10, 'Interstellar', 2014, 'Science Fiction', 'Paramount Pictures', 12, 774.15, 169, 'interstellar.jpg'),
 (11, 'Frozen', 2013, 'Animation/Musical', 'Walt Disney', 6, 1280.00, 102, 'frozen.jpg');");
 
-$db->query("INSERT INTO filme VALUES (12, 'The Rock', 1996, 'Action', 'Walt Disney Studios', 16, 335, 136, NULL);");
+$db->query("INSERT INTO filme VALUES (12, 'The Rock', 1996, 'Action', 'Bruckheimer Films & Hollywood Pictures', 16, 335, 136, 'rock.jpg');");
 
-$db->query("INSERT INTO filme VALUES (13, 'The Little Things', 2021, 'Krimi', 'Warner Bros. Pictures', 16, 30.8, 128, NULL);");
-$db->query("INSERT INTO filme VALUES (14, 'Idiocracy', 2006, 'Dokumentation', '20th Century Fox', 16, 0.5, 84, NULL);");
+$db->query("INSERT INTO filme VALUES (13, 'The Little Things', 2021, 'Krimi', 'Warner Bros. Pictures', 16, 30.8, 128, 'little_things.jpg');");
+$db->query("INSERT INTO filme VALUES (14, 'Idiocracy', 2006, 'Dokumentation', '20th Century Fox', 16, 0.5, 84, 'idiocracy.png');");
 
-$db->query("INSERT INTO filme VALUES (15, 'The Darkest Hour', 2011, 'Science Fiction', 'Sony Pictures', 12, 150.85, 89, NULL);");
+$db->query("INSERT INTO filme VALUES (15, 'The Darkest Hour', 2011, 'Science Fiction', 'Sony Pictures', 12, 150.85, 89, 'darkest_hour.jpg');");
 
 // PDOStatement-Objekt erzeugen
 $stmt = $db->query('SELECT * FROM filme;');
@@ -37,3 +39,6 @@ var_dump($stmt);
 $filme = $stmt->fetchAll();
 
 var_dump($filme);
+
+
+
