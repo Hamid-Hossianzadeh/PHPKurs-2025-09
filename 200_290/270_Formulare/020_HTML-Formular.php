@@ -6,6 +6,7 @@ var_dump($_GET);
 // Bei der Methode POST werden die Inhalte in Hintergrund überliefert.
 var_dump($_POST);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -21,7 +22,7 @@ var_dump($_POST);
     vorname: <input type="text" name="vorname">
     <input type="submit" value="Abschicken">
 
-
 </form>
+
 </body>
 </html>
