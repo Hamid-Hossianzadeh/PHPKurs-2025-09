@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Touristeninfo – EuroCityTravel</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+  <img src="logo.gif" alt="EuroCityTravel Logo">
+  <div class="brand">EuroCityTravel</div>
+  <nav aria-label="Hauptnavigation" style="margin-left:auto">
+    <a href="index.html">Home</a>
+    <a href="auskunft.html">Reisesuche</a>
+    <a href="info.html">Touristeninfo</a>
+    <a href="login.html">Anmeldung</a>
+    <a href="gast.html">Gästebuch</a>
+    <a href="forum.html">Forum</a>
+  </nav>
+</header>
+<main class="container">
+
+  <h1>Touristeninformation</h1>
+  <p>Die konkreten Werte für das Reiseziel werden später ergänzt.</p>
+  <form class="form-card" method="post" action="info.php">
+    <label for="ziel">Reiseziel</label>
+    <select id="ziel" name="ziel" required>
+      <option value="">— bitte wählen —</option>
+      <!-- Optionen werden später eingepflegt -->
+    </select>
+
+    <label for="frage">Ihre Frage</label>
+    <textarea id="frage" name="frage" placeholder="Welche Informationen benötigen Sie?"></textarea>
+
+    <div class="btn-row">
+      <input type="submit" value="Info anfordern">
+      <input type="reset" value="Zurücksetzen">
+    </div>
+  </form>
+
+</main>
+<footer>&copy; Touristeninfo EuroCityTravel</footer>
+</body>
+</html>

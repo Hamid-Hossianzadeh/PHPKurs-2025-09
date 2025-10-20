@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reisesuche – EuroCityTravel</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+  <img src="logo.gif" alt="EuroCityTravel Logo">
+  <div class="brand">EuroCityTravel</div>
+  <nav aria-label="Hauptnavigation" style="margin-left:auto">
+    <a href="index.html">Home</a>
+    <a href="auskunft.html">Reisesuche</a>
+    <a href="info.html">Touristeninfo</a>
+    <a href="login.html">Anmeldung</a>
+    <a href="gast.html">Gästebuch</a>
+    <a href="forum.html">Forum</a>
+  </nav>
+</header>
+<main class="container">
+
+  <h1>Reisesuche</h1>
+  <p>Die konkreten Auswahlwerte für Abreiseort und Zielort werden später ergänzt.</p>
+  <form class="form-card" method="post" action="ergebnis.php">
+    <label for="from">Abreiseort</label>
+    <select id="from" name="from" required>
+      <option value="0"> bitte wählen </option>
+        <option value="1"> Frankfurt </option>
+        <option value="2"> Stuttgart </option>
+        <option value="3"> Hamburg </option>
+
+    </select>
+
+    <label for="to">Zielort</label>
+    <select id="to" name="to" required>
+      <option value="0"> bitte wählen </option>
+        <option value="1"> Paris </option>
+        <option value="2"> Rom </option>
+
+    </select>
+
+    <label for="date">Abreisedatum</label>
+    <input type="date" id="date" name="date">
+
+    <div class="btn-row">
+      <input type="submit" value="Suchen">
+      <input type="reset" value="Zurücksetzen">
+    </div>
+  </form>
+
+</main>
+<footer>&copy; Reisesuche EuroCityTravel</footer>
+</body>
+</html>

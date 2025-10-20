@@ -1,0 +1,87 @@
+/* main.css — EuroCityTravel */
+:root{
+  --bg:#666666;
+  --brand:#000066;
+  --table:#3999CC;
+  --form-bg:#eaf6fc; /* lighter area to make forms stand out */
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;border:0}
+body{
+  background:var(--bg);
+  color:var(--brand);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12pt;
+  line-height:1.5;
+}
+header{
+  background:var(--brand);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:10px 16px;
+}
+header img{
+  height:50px;
+  width:auto;
+}
+header .brand{
+  font-weight:bold;
+  font-size:20pt;
+  letter-spacing:.5px;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-right:12px;
+  font-weight:bold;
+}
+nav a:hover, nav a:focus{text-decoration:underline}
+.container{
+  max-width:980px;
+  margin:24px auto;
+  background:#fff;
+  color:var(--brand);
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
+.form-card{
+  background:var(--form-bg);
+  padding:16px;
+  border-radius:8px;
+  border:1px solid #c6e6f6;
+}
+label{display:block;margin:.5rem 0 .2rem}
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], select, textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid #b7d6ea;
+  border-radius:6px;
+  font-size:12pt;
+}
+textarea{min-height:140px;resize:vertical}
+.btn-row{display:flex;gap:10px;margin-top:12px}
+button, input[type="submit"], input[type="reset"]{
+  padding:10px 16px;
+  border:0;
+  border-radius:8px;
+  cursor:pointer;
+  background:#3999CC; /* not grey */
+  color:#fff;
+  font-weight:bold;
+}
+button.secondary, input[type="reset"]{
+  background:#195c7a;
+}
+/* Tables */
+table{border-collapse:collapse;width:100%;margin:12px 0}
+td, th{padding:6px;font-size:10pt}
+td{background:var(--table); color:#fff}
+th{background:#1f7fae; color:#fff; text-align:left}
+/* Footer */
+footer{
+  color:#fff; background:var(--brand);
+  padding:10px 16px; text-align:center; margin-top:24px;
+}
